@@ -45,4 +45,27 @@ You can take your public script endpoint and run it in your browser anytime, to 
 
 Please remember, that for each class (e.g. separately for `book` and `author`) you want to store IDs of, you will need a copy of these script, and copy of Sockets (each class will require 1 Script Endpoint and 2 Triggers).
 
+Here's an example of getting a random book, displaying it then incrementing its key and diplaying it again - all in Swift.
+
+```swift
+Syncano.sharedInstanceWithApiKey("KEY WITH IGNORE ACL", instanceName: "INSTANCE_NAME")
+SCScriptEndpoint.runPublicScriptEndpointWithURLString("https://api.syncano.io/v1.1/instances/syncano-support/endpoints/scripts/p/32e7a2452025158941345043d954b643447b0c50/get_random_book_id/", payload: [:]) { response, error in
+   if let result = response?.result! as? [String:String],
+      let random_id = result["stdout"] {
+         let book = Book()
+         book.objectId = Int(random_id)
+         book.fetchWithCompletion { error in
+            print("\(error)")
+            //display book here
+            print(book)
+            book.incrementKey("age", by: 1, withCompletion: { error in
+               print("\(error)")
+               //display book after increment
+               print(book)
+            })
+         }
+   }
+}
+``` 
+
 Hope it helps! If you have any questions, ping me on [Twitter](https://twitter.com/lifcio).
