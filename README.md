@@ -20,9 +20,9 @@ Make sure to fill in class fields:
 
 Now, create 3 scripts. Take the scripts available in this repo, and copy them into Syncano. Go into Scripts section of your [Dashboard](https://dashboard.syncano.io) and create 3 new Scripts with NodeJS runtime environment.
 
-- `add_id_from_class.js` - make sure to replace API Key with your key with Ignore ACL setting, as well as class name (set it e.g. to `book`)
-- `remove_id_from_class.js` - make sure to replace API Key with your key with Ignore ACL setting, as well as class name (set it e.g. to `book`)
-- `get_random_id_from_class.js` - make sure to replace API Key with your key with Ignore ACL setting, as well as class name (set it e.g. to `book`)
+- [`add_id_from_class.js`](add_id_from_class.js) - make sure to replace API Key with your key with Ignore ACL setting, as well as class name (set it e.g. to `book`)
+- [`remove_id_from_class.js`](remove_id_from_class.js) - make sure to replace API Key with your key with Ignore ACL setting, as well as class name (set it e.g. to `book`)
+- [`get_random_id_from_class.js`](get_random_id_from_class.js) - make sure to replace API Key with your key with Ignore ACL setting, as well as class name (set it e.g. to `book`)
 
 Now, go to Sockets section of your [Dashboard](https://dashboard.syncano.io), and create 3 new Sockets:
 
