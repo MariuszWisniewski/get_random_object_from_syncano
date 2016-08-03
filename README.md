@@ -18,7 +18,7 @@ After class is added, go inside and create an object for every class you want to
 Make sure to fill in class fields:
 
 - `ids` - set it to an empty array - `[]`
-- `clas_name` - set to the name of the class, in our case `book` for first objects, and `author` for second object
+- `class_name` - set to the name of the class, in our case `book` for first objects, and `author` for second object
 
 ![example of adding ID holder object](new_id_holder_object.png)
 
